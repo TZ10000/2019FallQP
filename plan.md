@@ -17,4 +17,4 @@ ii) What do we need:
 2. Robot(cart) to calculate the shortest route between two location
 
 i) Description:
-  When trying to figure the shortest route between two location, the map may not always do the work. The idea is we put down the robot and it will find the shortest cut for you automatically. It will go automatically without 
+  When trying to figure the shortest route between two location, the map may not always do the work. The idea is we put down the robot and it will find the shortest cut for you automatically. It will go automatically without repeating same route. After all, it will give you the shortest way.
