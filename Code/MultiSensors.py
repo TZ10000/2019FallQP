@@ -127,18 +127,18 @@ if __name__ == '__main__':
 
         # sensor1 triggered
         if dist1 < firstDist:
-            triggeredList[0] = dist1;
+            triggeredListEnter[0] = dist1;
 
-        if dist2 < firstDist:
-            triggeredList[1] = dist2;
+        if dist2 < secondDist:
+            dist2 == dist1 ? triggeredListEnter[1] = dist2 : triggeredList[];
             
-        if dist3 < firstDist:
+        if dist3 < thirdDist:
             triggeredList[2] = dist3;
 
         # 1->2->3 case
         if triggeredList == [1, 2, 3]:
             count = count + 1;
-            triggeredList = [];
+            triggeredListEnter = [];
 
         # 3->2->1 case
         if triggeredList == [3, 2, 1]:
