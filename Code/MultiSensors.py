@@ -127,13 +127,22 @@ if __name__ == '__main__':
 
         # sensor1 triggered
         if dist1 < firstDist:
-            (dist1 == dist3) ? triggeredListExit.append(1) : triggeredListEnter.append(1);
+            if dist1 == dist3:
+                triggeredListExit.append(1);
+            else:
+                triggeredListEnter.append(1);
 
         if dist2 < secondDist:
-            (dist2 == dist1) ? triggeredListEnter.append(2) : triggeredListExit.append(2);
+            if dist2 == dist1:
+                triggeredListExit.append(2);
+            else:
+                triggeredListEnter.append(2);
             
         if dist3 < thirdDist:
-            (dist3 == dist1) ? triggeredListEnter.append(3) : triggeredListExit.append(3);
+            if dist3 == dist1:
+                triggeredListExit.append(3);
+            else:
+                triggeredListEnter.append(3);
 
         # 1->2->3 case
         if triggeredListEnter == [1, 2, 3]:
