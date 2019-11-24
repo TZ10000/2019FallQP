@@ -23,13 +23,13 @@ MEASURE_REFERENCE = 17150
 sensors = []
 
 # sensor1 with pin configuration
-sensor1 = {'ID': 'sensor1', 'TRIG': 17, 'ECHO': 4, 'LED_PIN': 27 }
+sensor1 = {'ID': 'sensor1', 'TRIG': 23, 'ECHO': 24}
 sensors.append(sensor1) # add to the list
 # sensor2 with pin configuration
-sensor2 = {'ID': 'sensor2', 'TRIG': 22, 'ECHO': 5, 'LED_PIN': 6 }
+sensor2 = {'ID': 'sensor2', 'TRIG': 22, 'ECHO': 10}
 sensors.append(sensor2) # add to the list
 # sensor3 with pin configuration
-sensor3 = {'ID': 'sensor3', 'TRIG': 18, 'ECHO': 23, 'LED_PIN': 24 }
+sensor3 = {'ID': 'sensor3', 'TRIG': 25, 'ECHO': 8}
 sensors.append(sensor3) # add to the list
 # sensor4 with pin configuration
 # sensor4 = {'ID': 'sensor4', 'TRIG': 20, 'ECHO': 16, 'LED_PIN': 21 }
@@ -38,6 +38,7 @@ sensors.append(sensor3) # add to the list
 
 
 def initPins():
+    print('initial pin')
     if len(sensors) > 0:
         for sensor in sensors:
             #Sensor's echo pins shoud be in
@@ -47,8 +48,8 @@ def initPins():
             GPIO.setup( sensor['TRIG'], GPIO.OUT );
 
             #Sensor's out_pin
-            GPIO.setup( sensor['LED_PIN'], GPIO.OUT );
-            GPIO.output( sensor['LED_PIN'], GPIO.LOW ); # Turn off in the begining
+            #GPIO.setup( sensor['LED_PIN'], GPIO.OUT );
+            #GPIO.output( sensor['LED_PIN'], GPIO.LOW ); # Turn off in the begining
 
 # def turnOnLed(led_pin):
 #     #Turn on led only if it is off for some safety mesures
@@ -61,49 +62,63 @@ def initPins():
 #         GPIO.output(led_pin, GPIO.LOW)
 
 def measure(sensor):
-    print "Measurement started for " + sensor['ID'] + ", Ctrl+z to cancle the measurement";
+    print ("Measurement started for " + sensor['ID'] + ", Ctrl+z to cancle the measurement");
 
-    while True:
-        GPIO.output( sensor['TRIG'], GPIO.LOW);
+    #while True:
+    #GPIO.output( sensor['TRIG'], GPIO.LOW);
 
-        time.sleep(MEASURE_INTERVAL_TIME); #DELAY
+    #time.sleep(MEASURE_INTERVAL_TIME); #DELAY
 
-        GPIO.output(sensor['TRIG'], GPIO.HIGH);
+    GPIO.output(sensor['TRIG'], GPIO.HIGH);
 
-        time.sleep(SENSOR_SETTLE_TIME);
+    time.sleep(SENSOR_SETTLE_TIME);
 
-        GPIO.output(sensor['TRIG'], GPIO.LOW);
+    GPIO.output(sensor['TRIG'], GPIO.LOW);
+    
+    # manually set starttime
+    pulse_start = time.time()
+    pulse_end = time.time()
+    
+    #print('get there1')
 
-        while GPIO.input(sensor['ECHO']) == 0:
-            pulse_start = time.time();
+    while GPIO.input(sensor['ECHO']) == 0:
+        #print('get there2')
+        pulse_start = time.time();
 
-        while GPIO.input(sensor['ECHO']) == 1:
-            pulse_end = time.time();
+    while GPIO.input(sensor['ECHO']) == 1:
+        #print('get there3')
+        pulse_end = time.time();
 
-        pulse_duration = pulse_end - pulse_start;
+    pulse_duration = pulse_end - pulse_start;
+    #print('get there4')
 
-        distance = pulse_duration * MEASURE_REFERENCE;
-        distanceRound = round(distance, 2);
+    distance = pulse_duration * MEASURE_REFERENCE;
+    distanceRound = round(distance, 2);
 
         #if(distanceRound < MAX_DISTANCE_THRESHOLD):
         #    turnOnLed(sensor['LED_PIN'])
         #else:
         #    turnOffLed(sensor['LED_PIN'])
 
-        print "Distance of sensor "+ sensor['ID'] + " : ", distanceRound, "cm";
-        #return distanceRound
+    print ("Distance of sensor "+ sensor['ID'] + " : ", distanceRound, "cm");
+    return distanceRound
 
 
 def main():
     initPins()
 
     # TODO: need change this part
-    if len(sensors) > 0:
-        for sensor in sensors:
-            Process(target=measure, args=(sensor, )).start()
+    #if len(sensors) > 0:
+     #   for sensor in sensors:
+     #      Process(target=measure, args=(sensor, )).start()
+    for sensor in sensors:
+        print(measure(sensor))
 
 # TODO
+
 if __name__ == '__main__':
+    main()
+'''
     # set initial count
     print raw_input('please enter initial count: ');
     count = raw_input('please enter initial count: ');
@@ -144,3 +159,4 @@ if __name__ == '__main__':
         if triggeredList == [3, 2, 1]:
             count = count - 1;
             triggeredList = [];
+'''

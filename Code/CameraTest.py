@@ -16,7 +16,7 @@ camera = PiCamera()
 pic_name = 0
 
 camera.start_preview()
-time.sleep(2)
+time.sleep(1)
 
 while True:
     i=GPIO.input(11)
@@ -33,7 +33,7 @@ while True:
             camera.capture(final)
         counter = 0
         print ("No intruders",i)
-        time.sleep(0.1)
+        time.sleep(1)
         
     elif i==1:               #When output from motion sensor is HIGH
         if counter == 0:
@@ -41,6 +41,6 @@ while True:
             message = 'Human detected:' + 'start at ' + current
         counter = counter + 1
         print ("Intruder detected",i)
-        time.sleep(0.1)
+        time.sleep(1)
         
 camera.stop_preview()
