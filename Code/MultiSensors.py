@@ -115,8 +115,8 @@ if __name__ == '__main__':
 
     while True:
         # list for trigger sequence
-        triggeredListEnter = [0, 0, 0];
-        triggeredListExit = [0, 0, 0];
+        triggeredListEnter = [];
+        triggeredListExit = [];
 
         # return distance detected from each sensor
         dist1 = measure(sensor1);
@@ -127,20 +127,20 @@ if __name__ == '__main__':
 
         # sensor1 triggered
         if dist1 < firstDist:
-            triggeredListEnter[0] = dist1;
+            (dist1 == dist3) ? triggeredListExit.append(1) : triggeredListEnter.append(1);
 
         if dist2 < secondDist:
-            dist2 == dist1 ? triggeredListEnter[1] = dist2 : triggeredList[];
+            (dist2 == dist1) ? triggeredListEnter.append(2) : triggeredListExit.append(2);
             
         if dist3 < thirdDist:
-            triggeredList[2] = dist3;
+            (dist3 == dist1) ? triggeredListEnter.append(3) : triggeredListExit.append(3);
 
         # 1->2->3 case
-        if triggeredList == [1, 2, 3]:
+        if triggeredListEnter == [1, 2, 3]:
             count = count + 1;
             triggeredListEnter = [];
 
         # 3->2->1 case
-        if triggeredList == [3, 2, 1]:
+        if triggeredListExit == [3, 2, 1]:
             count = count - 1;
-            triggeredList = [];
+            triggeredListExit = [];
