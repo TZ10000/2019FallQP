@@ -104,3 +104,43 @@ def main():
 
 # TODO
 if __name__ == '__main__':
+    # set initial count
+    print raw_input('please enter initial count: ');
+    count = raw_input('please enter initial count: ');
+
+    # set up initial distance
+    firstDist = measure(sensor1);
+    secondDist = measure(sensor2);
+    thirdDist = measure(sensor3);
+
+    while True:
+        # list for trigger sequence
+        triggeredListEnter = [0, 0, 0];
+        triggeredListExit = [0, 0, 0];
+
+        # return distance detected from each sensor
+        dist1 = measure(sensor1);
+        dist2 = measure(sensor2);
+        dist3 = measure(sensor3);
+        
+        print "dist1 = " + dist1 + " dist2 = "+ dist2 + " dist3 = " + dist 3;
+
+        # sensor1 triggered
+        if dist1 < firstDist:
+            triggeredList[0] = dist1;
+
+        if dist2 < firstDist:
+            triggeredList[1] = dist2;
+            
+        if dist3 < firstDist:
+            triggeredList[2] = dist3;
+
+        # 1->2->3 case
+        if triggeredList == [1, 2, 3]:
+            count = count + 1;
+            triggeredList = [];
+
+        # 3->2->1 case
+        if triggeredList == [3, 2, 1]:
+            count = count - 1;
+            triggeredList = [];
