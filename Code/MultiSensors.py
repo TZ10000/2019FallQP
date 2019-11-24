@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import sys
 from threading import Thread
 from multiprocessing import Process
 
@@ -62,13 +63,13 @@ def initPins():
 #         GPIO.output(led_pin, GPIO.LOW)
 
 def measure(sensor):
-    print ("Measurement started for " + sensor['ID'] + ", Ctrl+z to cancle the measurement");
+    #print ("Measurement started for " + sensor['ID'] + ", Ctrl+z to cancle the measurement");
 
     #while True:
     #GPIO.output( sensor['TRIG'], GPIO.LOW);
 
     #time.sleep(MEASURE_INTERVAL_TIME); #DELAY
-
+    #print('2')
     GPIO.output(sensor['TRIG'], GPIO.HIGH);
 
     time.sleep(SENSOR_SETTLE_TIME);
@@ -111,6 +112,7 @@ def main():
     #if len(sensors) > 0:
      #   for sensor in sensors:
      #      Process(target=measure, args=(sensor, )).start()
+    #print('1')
     for sensor in sensors:
         print(measure(sensor))
 
@@ -118,45 +120,59 @@ def main():
 
 if __name__ == '__main__':
     main()
-'''
+
     # set initial count
-    print raw_input('please enter initial count: ');
-    count = raw_input('please enter initial count: ');
+    cnt = input('please enter initial count: ');
+    count = int(cnt)
+    #count = raw_input('please enter initial count: ');
 
     # set up initial distance
     firstDist = measure(sensor1);
     secondDist = measure(sensor2);
     thirdDist = measure(sensor3);
+    
+    testLog = open('./testLog.txt', 'w')
+    
+    # list for trigger sequence
+    triggeredList = [0, 0, 0];
+    triggeredListEnter = [0, 0, 0];
+    triggeredListExit = [0, 0, 0];
 
-    while True:
-        # list for trigger sequence
-        triggeredListEnter = [0, 0, 0];
-        triggeredListExit = [0, 0, 0];
+    while count < 15:
+        print ('current count: ' + str(count))
+        testLog.write('current count: ' + str(count) + '\n')
+        
+        print(triggeredList)
 
         # return distance detected from each sensor
         dist1 = measure(sensor1);
         dist2 = measure(sensor2);
         dist3 = measure(sensor3);
         
-        print "dist1 = " + dist1 + " dist2 = "+ dist2 + " dist3 = " + dist 3;
+        print ("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3));
+        testLog.write("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3) + '\n')
 
         # sensor1 triggered
         if dist1 < firstDist:
-            triggeredList[0] = dist1;
+            triggeredList[0] = 1;
 
         if dist2 < firstDist:
-            triggeredList[1] = dist2;
+            triggeredList[1] = 2;
             
         if dist3 < firstDist:
-            triggeredList[2] = dist3;
+            triggeredList[2] = 3;
 
         # 1->2->3 case
         if triggeredList == [1, 2, 3]:
             count = count + 1;
-            triggeredList = [];
+            triggeredList = [0, 0, 0];
 
         # 3->2->1 case
         if triggeredList == [3, 2, 1]:
-            count = count - 1;
-            triggeredList = [];
-'''
+            #count = count - 1;
+            triggeredList = [0, 0, 0];
+            
+        
+        time.sleep(1)
+    GPIO.cleanup()
+    testLog.close()
