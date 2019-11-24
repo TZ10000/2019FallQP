@@ -63,7 +63,7 @@ def initPins():
 def measure(sensor):
     print "Measurement started for " + sensor['ID'] + ", Ctrl+z to cancle the measurement";
 
-    #while True:
+    while True:
         GPIO.output( sensor['TRIG'], GPIO.LOW);
 
         time.sleep(MEASURE_INTERVAL_TIME); #DELAY
@@ -91,7 +91,7 @@ def measure(sensor):
         #    turnOffLed(sensor['LED_PIN'])
 
         print "Distance of sensor "+ sensor['ID'] + " : ", distanceRound, "cm";
-        return distanceRound
+        #return distanceRound
 
 
 def main():
