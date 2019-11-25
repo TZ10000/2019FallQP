@@ -105,10 +105,10 @@ def measure(sensor):
     return distanceRound
 
 #inclusive check if the int diff is in the range
-def rangeEqual(int1, int2, range):
-    if (abs(int1 - int2) <= range):
-        return true
-    return false
+def rangeEqual(int1, int2, range0):
+    if (abs(int1 - int2) <= range0):
+        return True
+    return False
 
 def main():
     initPins()
@@ -132,23 +132,19 @@ if __name__ == '__main__':
     #count = raw_input('please enter initial count: ');
 
     # set up initial distance
-    firstDist = 25;
-    secondDist = 25;
-    thirdDist = 25;
+    initDist = measure(sensor1);
+    interval = initDist / 5;
     
     testLog = open('./testLog.txt', 'w')
     
     # list for trigger sequence
-    triggeredList = [];
-    triggeredListEnter = [];
-    triggeredListExit = [];
+    triggeredList = [[], [], [], [], []];
 
     while count < 15:
         print ('current count: ' + str(count))
         testLog.write('current count: ' + str(count) + '\n')
         
-        print(triggeredListEnter)
-        print(triggeredListExit)
+        print(triggeredList);
 
 
         # return distance detected from each sensor
@@ -156,39 +152,43 @@ if __name__ == '__main__':
         dist2 = measure(sensor2);
         dist3 = measure(sensor3);
         
+        dist1slot = int(dist1 / interval);
+        print(dist1slot);
+        dist2slot = int(dist2 / interval);
+        print(dist2slot);
+        dist3slot = int(dist3 / interval);
+        print(dist3slot);
+        
         print ("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3));
         testLog.write("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3) + '\n')
 
          # sensor1 triggered
-        if dist1 < firstDist:
-            if dist1 == dist3:
-                triggeredListExit.append(1);
-            else:
-                triggeredListEnter.append(1);
+        if dist1 < initDist:
+            triggeredList[dist1slot].append(1);
 
-        if dist2 < secondDist:
-            if dist2 == dist1:
-                triggeredListExit.append(2);
-            else:
-                triggeredListEnter.append(2);
+        if dist2 < initDist:
+            triggeredList[dist2slot].append(2);
             
-        if dist3 < thirdDist:
-            if dist3 == dist1:
-                triggeredListExit.append(3);
-            else:
-                triggeredListEnter.append(3);
-
-        # 1->2->3 case
-        if triggeredListEnter == [1, 2, 3]:
-            count = count + 1;
-            triggeredListEnter = [];
-
-        # 3->2->1 case
-        if triggeredListExit == [3, 2, 1]:
-            count = count - 1;
-            triggeredListExit = [];
-            
+        if dist3 < initDist:
+            triggeredList[dist3slot].append(3);
+                
+        for i in range(len(triggeredList) - 1):
+            for j in range(len(triggeredList[i]) - 2):
+                if triggeredList[i][j] == triggeredList[i][j + 1]:
+                    del triggeredList[i][j];
+                    j = j-1;
+                    
+        for i in range(len(triggeredList) - 1):
+            if triggeredList[i] == [1, 2, 3]:
+                count = count + 1;
+                triggeredList[i] = [];
+            if triggeredList[i] == [3, 2, 1]:
+                count = count - 1;
+                triggeredList[i] = [];
+            elif len(triggeredList[i]) > 3:
+                triggeredList[i] = [];
         
-    time.sleep(1)
+        time.sleep(2)
+        
     GPIO.cleanup()
     testLog.close()
