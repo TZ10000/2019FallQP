@@ -104,6 +104,11 @@ def measure(sensor):
     print ("Distance of sensor "+ sensor['ID'] + " : ", distanceRound, "cm");
     return distanceRound
 
+#inclusive check if the int diff is in the range
+def rangeEqual(int1, int2, range):
+    if (abs(int1 - int2) <= range):
+        return true
+    return false
 
 def main():
     initPins()
