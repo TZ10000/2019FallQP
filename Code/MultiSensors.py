@@ -63,7 +63,7 @@ def initPins():
 #         GPIO.output(led_pin, GPIO.LOW)
 
 def measure(sensor):
-    #print ("Measurement started for " + sensor['ID'] + ", Ctrl+z to cancle the measurement");
+    #print ("Measurement started for " + sensor['ID'] + ", Ctrl+z to cancel the measurement");
 
     #while True:
     #GPIO.output( sensor['TRIG'], GPIO.LOW);
@@ -127,22 +127,24 @@ if __name__ == '__main__':
     #count = raw_input('please enter initial count: ');
 
     # set up initial distance
-    firstDist = measure(sensor1);
-    secondDist = measure(sensor2);
-    thirdDist = measure(sensor3);
+    firstDist = 25;
+    secondDist = 25;
+    thirdDist = 25;
     
     testLog = open('./testLog.txt', 'w')
     
     # list for trigger sequence
-    triggeredList = [0, 0, 0];
-    triggeredListEnter = [0, 0, 0];
-    triggeredListExit = [0, 0, 0];
+    triggeredList = [];
+    triggeredListEnter = [];
+    triggeredListExit = [];
 
     while count < 15:
         print ('current count: ' + str(count))
         testLog.write('current count: ' + str(count) + '\n')
         
-        print(triggeredList)
+        print(triggeredListEnter)
+        print(triggeredListExit)
+
 
         # return distance detected from each sensor
         dist1 = measure(sensor1);
@@ -152,25 +154,34 @@ if __name__ == '__main__':
         print ("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3));
         testLog.write("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3) + '\n')
 
-        # sensor1 triggered
+         # sensor1 triggered
         if dist1 < firstDist:
-            triggeredList[0] = 1;
+            if dist1 == dist3:
+                triggeredListExit.append(1);
+            else:
+                triggeredListEnter.append(1);
 
-        if dist2 < firstDist:
-            triggeredList[1] = 2;
+        if dist2 < secondDist:
+            if dist2 == dist1:
+                triggeredListExit.append(2);
+            else:
+                triggeredListEnter.append(2);
             
-        if dist3 < firstDist:
-            triggeredList[2] = 3;
+        if dist3 < thirdDist:
+            if dist3 == dist1:
+                triggeredListExit.append(3);
+            else:
+                triggeredListEnter.append(3);
 
         # 1->2->3 case
-        if triggeredList == [1, 2, 3]:
+        if triggeredListEnter == [1, 2, 3]:
             count = count + 1;
-            triggeredList = [0, 0, 0];
+            triggeredListEnter = [];
 
         # 3->2->1 case
-        if triggeredList == [3, 2, 1]:
-            #count = count - 1;
-            triggeredList = [0, 0, 0];
+        if triggeredListExit == [3, 2, 1]:
+            count = count - 1;
+            triggeredListExit = [];
             
         
         time.sleep(1)
