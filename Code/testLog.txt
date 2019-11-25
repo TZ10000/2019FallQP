@@ -1,0 +1,280 @@
+current count: 10
+dist1 = 25.42 dist2 = 25.5 dist3 = 24.74
+current count: 10
+dist1 = 25.46 dist2 = 25.5 dist3 = 25.15
+current count: 10
+dist1 = 25.44 dist2 = 25.5 dist3 = 25.21
+current count: 10
+dist1 = 25.45 dist2 = 25.5 dist3 = 24.73
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.72
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.32
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.71
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.71
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.73
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.77
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.75
+current count: 10
+dist1 = 25.45 dist2 = 25.5 dist3 = 24.72
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.31
+current count: 10
+dist1 = 25.44 dist2 = 25.5 dist3 = 24.77
+current count: 10
+dist1 = 25.44 dist2 = 25.5 dist3 = 24.3
+current count: 10
+dist1 = 25.48 dist2 = 25.5 dist3 = 24.73
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.33
+current count: 10
+dist1 = 25.44 dist2 = 25.5 dist3 = 24.78
+current count: 10
+dist1 = 25.42 dist2 = 25.5 dist3 = 25.22
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.3
+current count: 10
+dist1 = 25.43 dist2 = 25.5 dist3 = 24.71
+current count: 10
+dist1 = 25.47 dist2 = 25.5 dist3 = 25.13
+current count: 10
+dist1 = 25.46 dist2 = 25.5 dist3 = 24.73
+current count: 10
+dist1 = 25.47 dist2 = 25.5 dist3 = 25.19
+current count: 10
+dist1 = 25.47 dist2 = 25.5 dist3 = 24.77
+current count: 10
+dist1 = 25.45 dist2 = 25.5 dist3 = 24.76
+current count: 10
+dist1 = 25.45 dist2 = 25.5 dist3 = 24.29
+current count: 10
+dist1 = 25.48 dist2 = 25.5 dist3 = 24.74
+current count: 10
+dist1 = 25.42 dist2 = 25.5 dist3 = 24.85
+current count: 10
+dist1 = 25.14 dist2 = 25.4 dist3 = 24.13
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 25.5
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 7.84
+current count: 10
+dist1 = 25.5 dist2 = 8.98 dist3 = 1.03
+current count: 10
+dist1 = 7.19 dist2 = 25.5 dist3 = 21.84
+current count: 9
+dist1 = 9.02 dist2 = 22.33 dist3 = 24.34
+current count: 9
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.62
+current count: 9
+dist1 = 25.5 dist2 = 25.11 dist3 = 24.16
+current count: 9
+dist1 = 25.5 dist2 = 7.85 dist3 = 0.77
+current count: 9
+dist1 = 25.5 dist2 = 25.08 dist3 = 24.16
+current count: 9
+dist1 = 25.23 dist2 = 25.07 dist3 = 23.69
+current count: 9
+dist1 = 25.22 dist2 = 25.03 dist3 = 24.1
+current count: 9
+dist1 = 25.26 dist2 = 25.12 dist3 = 23.66
+current count: 9
+dist1 = 25.5 dist2 = 25.07 dist3 = 23.7
+current count: 9
+dist1 = 25.2 dist2 = 25.08 dist3 = 24.11
+current count: 9
+dist1 = 25.23 dist2 = 25.07 dist3 = 24.14
+current count: 9
+dist1 = 25.18 dist2 = 25.07 dist3 = 24.15
+current count: 9
+dist1 = 25.5 dist2 = 25.06 dist3 = 24.12
+current count: 9
+dist1 = 25.24 dist2 = 25.06 dist3 = 23.7
+current count: 9
+dist1 = 25.21 dist2 = 25.06 dist3 = 24.07
+current count: 9
+dist1 = 25.26 dist2 = 25.09 dist3 = 11.67
+current count: 9
+dist1 = 25.24 dist2 = 9.85 dist3 = 8.78
+current count: 10
+dist1 = 25.24 dist2 = 10.0 dist3 = 10.22
+current count: 10
+dist1 = 14.02 dist2 = 9.04 dist3 = 2.84
+current count: 10
+dist1 = 9.7 dist2 = 9.6 dist3 = 1.39
+current count: 10
+dist1 = 9.15 dist2 = 25.05 dist3 = 23.74
+current count: 10
+dist1 = 10.68 dist2 = 22.03 dist3 = 24.01
+current count: 10
+dist1 = 25.24 dist2 = 25.5 dist3 = 24.07
+current count: 10
+dist1 = 25.5 dist2 = 25.05 dist3 = 23.73
+current count: 10
+dist1 = 25.23 dist2 = 8.58 dist3 = 0.85
+current count: 10
+dist1 = 25.27 dist2 = 25.47 dist3 = 24.12
+current count: 10
+dist1 = 25.24 dist2 = 25.49 dist3 = 24.1
+current count: 10
+dist1 = 25.24 dist2 = 25.47 dist3 = 24.13
+current count: 10
+dist1 = 25.23 dist2 = 25.07 dist3 = 24.15
+current count: 10
+dist1 = 25.23 dist2 = 25.08 dist3 = 23.71
+current count: 10
+dist1 = 25.5 dist2 = 25.05 dist3 = 24.12
+current count: 10
+dist1 = 25.22 dist2 = 25.49 dist3 = 23.71
+current count: 10
+dist1 = 25.5 dist2 = 25.06 dist3 = 24.07
+current count: 10
+dist1 = 25.5 dist2 = 25.06 dist3 = 23.7
+current count: 10
+dist1 = 25.5 dist2 = 25.06 dist3 = 23.7
+current count: 10
+dist1 = 25.24 dist2 = 25.49 dist3 = 24.11
+current count: 10
+dist1 = 25.5 dist2 = 25.06 dist3 = 23.69
+current count: 10
+dist1 = 25.5 dist2 = 25.04 dist3 = 8.99
+current count: 11
+dist1 = 25.5 dist2 = 25.05 dist3 = 5.14
+current count: 11
+dist1 = 25.5 dist2 = 6.22 dist3 = 6.9
+current count: 11
+dist1 = 7.21 dist2 = 5.98 dist3 = 24.1
+current count: 11
+dist1 = 5.77 dist2 = 25.09 dist3 = 24.08
+current count: 10
+dist1 = 7.15 dist2 = 25.03 dist3 = 23.72
+current count: 10
+dist1 = 25.24 dist2 = 25.04 dist3 = 24.11
+current count: 10
+dist1 = 25.2 dist2 = 25.04 dist3 = 23.68
+current count: 10
+dist1 = 25.5 dist2 = 25.04 dist3 = 24.15
+current count: 10
+dist1 = 25.27 dist2 = 25.03 dist3 = 23.67
+current count: 10
+dist1 = 25.5 dist2 = 25.04 dist3 = 24.1
+current count: 10
+dist1 = 25.21 dist2 = 25.5 dist3 = 23.72
+current count: 10
+dist1 = 25.5 dist2 = 25.03 dist3 = 24.12
+current count: 10
+dist1 = 25.5 dist2 = 25.04 dist3 = 23.67
+current count: 10
+dist1 = 25.5 dist2 = 25.37 dist3 = 24.08
+current count: 10
+dist1 = 25.23 dist2 = 25.06 dist3 = 24.07
+current count: 10
+dist1 = 25.26 dist2 = 25.05 dist3 = 24.1
+current count: 10
+dist1 = 25.25 dist2 = 25.05 dist3 = 23.71
+current count: 10
+dist1 = 25.4 dist2 = 25.06 dist3 = 23.69
+current count: 10
+dist1 = 25.5 dist2 = 25.09 dist3 = 23.7
+current count: 10
+dist1 = 25.25 dist2 = 25.07 dist3 = 23.71
+current count: 10
+dist1 = 25.5 dist2 = 25.05 dist3 = 7.68
+current count: 10
+dist1 = 25.5 dist2 = 9.69 dist3 = 6.14
+current count: 10
+dist1 = 25.27 dist2 = 8.99 dist3 = 7.17
+current count: 10
+dist1 = 11.83 dist2 = 8.44 dist3 = 22.84
+current count: 10
+dist1 = 8.91 dist2 = 10.32 dist3 = 1.21
+current count: 10
+dist1 = 8.57 dist2 = 25.42 dist3 = 23.75
+current count: 10
+dist1 = 12.4 dist2 = 25.04 dist3 = 23.72
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 23.67
+current count: 10
+dist1 = 25.5 dist2 = 25.05 dist3 = 23.7
+current count: 10
+dist1 = 25.5 dist2 = 25.05 dist3 = 23.71
+current count: 10
+dist1 = 25.5 dist2 = 8.57 dist3 = 0.15
+current count: 10
+dist1 = 25.5 dist2 = 25.08 dist3 = 23.72
+current count: 10
+dist1 = 25.21 dist2 = 25.09 dist3 = 24.08
+current count: 10
+dist1 = 24.66 dist2 = 25.5 dist3 = 23.75
+current count: 10
+dist1 = 25.22 dist2 = 25.05 dist3 = 23.67
+current count: 10
+dist1 = 25.5 dist2 = 25.05 dist3 = 23.73
+current count: 10
+dist1 = 25.5 dist2 = 25.07 dist3 = 24.09
+current count: 10
+dist1 = 25.5 dist2 = 25.08 dist3 = 23.88
+current count: 10
+dist1 = 25.5 dist2 = 25.09 dist3 = 24.1
+current count: 10
+dist1 = 25.22 dist2 = 25.5 dist3 = 24.12
+current count: 10
+dist1 = 25.23 dist2 = 25.14 dist3 = 24.08
+current count: 10
+dist1 = 25.5 dist2 = 25.12 dist3 = 24.08
+current count: 10
+dist1 = 25.23 dist2 = 25.5 dist3 = 24.1
+current count: 10
+dist1 = 25.23 dist2 = 9.85 dist3 = 1.59
+current count: 10
+dist1 = 25.5 dist2 = 25.06 dist3 = 23.66
+current count: 10
+dist1 = 25.5 dist2 = 25.49 dist3 = 24.1
+current count: 10
+dist1 = 25.5 dist2 = 25.09 dist3 = 24.12
+current count: 10
+dist1 = 25.25 dist2 = 25.48 dist3 = 24.12
+current count: 10
+dist1 = 25.24 dist2 = 25.12 dist3 = 24.1
+current count: 10
+dist1 = 25.5 dist2 = 25.07 dist3 = 24.1
+current count: 10
+dist1 = 25.24 dist2 = 25.09 dist3 = 24.12
+current count: 10
+dist1 = 25.23 dist2 = 25.05 dist3 = 24.1
+current count: 10
+dist1 = 25.5 dist2 = 25.08 dist3 = 23.74
+current count: 10
+dist1 = 25.28 dist2 = 25.06 dist3 = 24.1
+current count: 10
+dist1 = 25.22 dist2 = 25.47 dist3 = 24.18
+current count: 10
+dist1 = 25.5 dist2 = 25.1 dist3 = 24.14
+current count: 10
+dist1 = 25.5 dist2 = 25.09 dist3 = 24.19
+current count: 10
+dist1 = 25.5 dist2 = 25.06 dist3 = 24.11
+current count: 10
+dist1 = 25.5 dist2 = 25.5 dist3 = 24.13
+current count: 10
+dist1 = 25.5 dist2 = 25.09 dist3 = 23.7
+current count: 10
+dist1 = 25.5 dist2 = 25.08 dist3 = 23.67
