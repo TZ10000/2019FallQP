@@ -184,6 +184,6 @@ if __name__ == '__main__':
             triggeredListExit = [];
             
         
-        time.sleep(1)
+    time.sleep(1)
     GPIO.cleanup()
     testLog.close()
