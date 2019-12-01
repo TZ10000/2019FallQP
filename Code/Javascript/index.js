@@ -4,7 +4,7 @@ function getCount() {
     var count = readTextFile("../Testlog.txt");
     
     document.getElementById("countTag").textContent = "count is: " + count;
-    console.log(counts);
+    console.log(count);
     return 42;
 }
 
