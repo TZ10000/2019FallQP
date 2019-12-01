@@ -144,6 +144,10 @@ if __name__ == '__main__':
     
     # list for trigger sequence
     triggeredList = [[], [], [], [], []];
+    
+    # width of person, subject to change
+    objectWidth = 5;
+    objectGap = 1;
 
     # TODO: change to an infinite loop
     while count < 15:
@@ -169,7 +173,7 @@ if __name__ == '__main__':
         # find the slot of the person
         dist1slot = int((dist1 - 1) / interval);
         #print(dist1slot);
-        dist2slot = int((dist2 - 1) / interval);
+        dist2slot = int((initDist - dist2 - objectWidth) / interval);
         #print(dist2slot);
         dist3slot = int((dist3 - 1) / interval);
         print("dist1slot: " +str(dist1slot) + " dist2slot: " + str(dist3slot) + " dist3slot: " + str(dist3slot));
@@ -182,7 +186,15 @@ if __name__ == '__main__':
             triggeredList[dist1slot].append(1);
         # sensor2 triggered
         if rangeEqual(dist2, initDist, 3):
-            triggeredList[dist2slot].append(2);
+            #first check if there alredy number in the slot
+            if len(triggeredList[dist2slot]) != 0:
+                triggeredList[dist2slot].append(2);
+            #else we assume if there are two object and check the corresponding position
+            else:
+                originalSlot = int((initDist - dist2 - 2 * objectWidth - objectGap) / interval);
+                if len(triggeredList[originSlot]) != 0:
+                    triggeredList[originalSlot].append(2);
+                    count = count + 1;
         # sensor3 triggered
         if rangeEqual(dist3, initDist, 3):
             triggeredList[dist3slot].append(3);
