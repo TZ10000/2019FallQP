@@ -164,7 +164,7 @@ if __name__ == '__main__':
     # TODO: change to an infinite loop
     while True:
         testLog = open('./testLog.txt', 'w')
-        testLog.write(str(count))
+        json.dump(count, testLog)
 
         print(triggeredList);
 
