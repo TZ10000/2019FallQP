@@ -10,6 +10,7 @@ function getCount() {
 
 function readTextFile(file)
 {
+    console.log("called");
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
