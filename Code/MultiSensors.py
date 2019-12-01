@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 import sys
+import json
 from threading import Thread
 from multiprocessing import Process
 
@@ -131,6 +132,17 @@ if __name__ == '__main__':
     count = int(cnt)
     #count = raw_input('please enter initial count: ');
 
+    # define your data you want in your javascript variable
+    my_data = {'field1': 'Price Center', 'field2': count}
+
+    # open an existing script that is ready to use the my_js_data variable
+    # we are about to generate
+    js = open('index.js', 'r')
+
+    # dynamically generate javascript code
+    javascript_out = "var my_js_data = JSON.parse('{}');".format(json.dumps(my_data))
+    javascript_out += js.read()
+
     # set up initial distance
     initDist = measure(sensor1);
     # seperate the door into several intervals
@@ -204,7 +216,7 @@ if __name__ == '__main__':
         for i in range(len(triggeredList)):
             j = 0;
             while j < (len(triggeredList[i]) - 1):
-                print ("j: " + str(j));
+                #print ("j: " + str(j));
                 if triggeredList[i][j] == triggeredList[i][j + 1]:
                     del triggeredList[i][j];
                     j = j-1;
@@ -230,6 +242,12 @@ if __name__ == '__main__':
                        or (triggeredList[i][0] == 3 and triggeredList[i][1] == 1):
                         triggeredList[i] = [];
         '''
+        my_data = {'field1': 'Price Center', 'field2': count}
+        
+        # dynamically generate javascript code
+        javascript_out = "var my_js_data = JSON.parse('{}');".format(json.dumps(my_data))
+        javascript_out += js.read()
+        
         time.sleep(0.1)
         
     GPIO.cleanup()
