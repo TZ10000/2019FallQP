@@ -152,7 +152,7 @@ if __name__ == '__main__':
     
     print(initDist);
     
-    testLog = open('./testLog.txt', 'w')
+    
     
     # list for trigger sequence
     triggeredList = [[], [], [], [], []];
@@ -163,6 +163,7 @@ if __name__ == '__main__':
 
     # TODO: change to an infinite loop
     while True:
+        testLog = open('./testLog.txt', 'w')
         print ('current count: ' + str(count))
         testLog.write('current count: ' + str(count) + '\n')
         
@@ -191,7 +192,8 @@ if __name__ == '__main__':
         print("dist1slot: " +str(dist1slot) + " dist2slot: " + str(dist3slot) + " dist3slot: " + str(dist3slot));
         
         print ("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3));
-        testLog.write("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3) + '\n')
+        
+        # testLog.write("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3) + '\n')
 
          # sensor1 triggered
         if rangeEqual(dist1, initDist, 3):
@@ -247,8 +249,10 @@ if __name__ == '__main__':
         # # dynamically generate javascript code
         # javascript_out = "var my_js_data = JSON.parse('{}');".format(json.dumps(my_data))
         # javascript_out += js.read()
+        testLog.write(count)
+        testLog.close()
         
         time.sleep(0.1)
         
     GPIO.cleanup()
-    testLog.close()
+    
