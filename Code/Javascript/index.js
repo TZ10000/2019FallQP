@@ -1,11 +1,13 @@
   console.log("Hello World!")
 
 function getCount() {
-    var count = readTextFile("../Testlog.txt");
+    const fs = require('fs');
+
+    let rawdata = fs.readFileSync('count.json');
+    let cnt = JSON.parse(rawdata);
+    console.log(cnt);
     
-    document.getElementById("countTag").textContent = "count is: " + count;
-    console.log(count);
-    return 42;
+    document.getElementById("countTag").textContent = "count is: " + cnt;
 }
 
 function readTextFile(file)
