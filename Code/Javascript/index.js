@@ -18,5 +18,6 @@ function readTextFile(file)
         if (err) throw err; 
   
         console.log(data.toString()); 
+        return data.toString();
     }) 
 }
