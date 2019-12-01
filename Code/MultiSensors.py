@@ -192,7 +192,7 @@ if __name__ == '__main__':
             #else we assume if there are two object and check the corresponding position
             else:
                 originalSlot = int((initDist - dist2 - 2 * objectWidth - objectGap) / interval);
-                if len(triggeredList[originSlot]) != 0:
+                if len(triggeredList[originalSlot]) != 0:
                     triggeredList[originalSlot].append(2);
                     count = count + 1;
         # sensor3 triggered
@@ -213,9 +213,6 @@ if __name__ == '__main__':
         # count people
         for i in range(len(triggeredList)):
             #print ('i is' + str(i))
-            if (len(triggeredList[i]) != 0 and triggeredList[i][0] == 2):
-                triggeredList[i] = [];
-                print("clear 2")
             if (triggeredList[i] == [1, 2, 3]) or (triggeredList[i] == [3, 1, 2]):
                 count = count + 1;
                 triggeredList[i] = [];
