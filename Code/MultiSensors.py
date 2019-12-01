@@ -107,8 +107,8 @@ def measure(sensor):
 #inclusive check if the int diff is in the range
 def rangeEqual(int1, int2, range):
     if (abs(int1 - int2) <= range):
-        return true
-    return false
+        return True
+    return False
 
 def main():
     initPins()
@@ -161,19 +161,19 @@ if __name__ == '__main__':
 
          # sensor1 triggered
         if dist1 < firstDist:
-            if dist1 == dist3:
+            if rangeEqual(dist1, dist3, 5):
                 triggeredListExit.append(1);
             else:
                 triggeredListEnter.append(1);
 
         if dist2 < secondDist:
-            if dist2 == dist1:
+            if rangeEqual(dist1, dist2, 5):
                 triggeredListExit.append(2);
             else:
                 triggeredListEnter.append(2);
             
         if dist3 < thirdDist:
-            if dist3 == dist1:
+            if rangeEqual(dist1, dist3, 5):
                 triggeredListExit.append(3);
             else:
                 triggeredListEnter.append(3);
