@@ -1,29 +1,5 @@
   console.log("Hello World!")
 
-function getCount() {
-    const fs = require('fs');
-
-    let rawdata = fs.readFileSync('count.json');
-    let cnt = JSON.parse(rawdata);
-    console.log(cnt);
-    
-    document.getElementById("countTag").textContent = "count is: " + cnt;
-}
-
-function readTextFile(file)
-{
-    // Requiring fs module in which  
-    // readFile function is defined. 
-    const fs = require('fs') 
-  
-    fs.readFile(file, (err, data) => { 
-        if (err) throw err; 
-  
-        console.log(data.toString()); 
-        return data.toString();
-    }) 
-}
-
 /** vim: et:ts=4:sw=4:sts=4
  * @license RequireJS 2.3.6 Copyright jQuery Foundation and other contributors.
  * Released under MIT license, https://github.com/requirejs/requirejs/blob/master/LICENSE
@@ -2169,3 +2145,28 @@ var requirejs, require, define;
     //Set up with config info.
     req(cfg);
 }(this, (typeof setTimeout === 'undefined' ? undefined : setTimeout)));
+
+function getCount() {
+    const fs = require('fs');
+
+    let rawdata = fs.readFileSync('count.json');
+    let cnt = JSON.parse(rawdata);
+    console.log(cnt);
+    
+    document.getElementById("countTag").textContent = "count is: " + cnt;
+}
+
+function readTextFile(file)
+{
+    // Requiring fs module in which  
+    // readFile function is defined. 
+    const fs = require('fs') 
+  
+    fs.readFile(file, (err, data) => { 
+        if (err) throw err; 
+  
+        console.log(data.toString()); 
+        return data.toString();
+    }) 
+}
+
