@@ -222,7 +222,7 @@ if __name__ == '__main__':
             if len(triggeredList[i]) >= 3:
                 triggeredList[i] = [];
             '''
-            #elif len(triggeredList[i]) != 0:
+            #if len(triggeredList[i]) != 0:
                 if triggeredList[i][0] == 2:
                     triggeredList[i] = [];
                 if len(triggeredList[i]) > 1:
