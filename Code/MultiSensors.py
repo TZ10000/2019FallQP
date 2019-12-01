@@ -249,7 +249,7 @@ if __name__ == '__main__':
         # # dynamically generate javascript code
         # javascript_out = "var my_js_data = JSON.parse('{}');".format(json.dumps(my_data))
         # javascript_out += js.read()
-        testLog.write(count)
+        testLog.write(str(count))
         testLog.close()
         
         time.sleep(0.1)
