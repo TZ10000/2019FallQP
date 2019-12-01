@@ -1,12 +1,28 @@
   console.log("Hello World!")
 
 function getCount() {
-    var my_js_data = JSON.parse('{"field1": "string value", "field2": 42}');
-
-    var name = my_js_data["field1"];
-    var count = my_js_data["field2"];
+    var count = readTextFile("../Testlog.txt");
     
     document.getElementById("countTag").textContent = "count is: " + count;
     console.log(counts);
     return 42;
+}
+
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+                return allText;
+            }
+        }
+    }
+    rawFile.send(null);
 }
