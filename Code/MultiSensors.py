@@ -221,7 +221,7 @@ if __name__ == '__main__':
                        or (triggeredList[i][0] == 3 and triggeredList[i][1] == 1):
                         triggeredList[i] = [];
         '''
-        time.sleep(0.1)
+        time.sleep(1)
         
     GPIO.cleanup()
     testLog.close()
