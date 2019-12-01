@@ -63,6 +63,11 @@ def initPins():
 #     if GPIO.input(led_pin) == GPIO.HIGH:
 #         GPIO.output(led_pin, GPIO.LOW)
 
+def writeToJSONFile(path, filename, data):
+    filePath = './' + path + '/' + filename + '.json'
+    with open(filePath, 'w') as fp:
+        json.dump(data, fp);
+
 def measure(sensor):
     #print ("Measurement started for " + sensor['ID'] + ", Ctrl+z to cancel the measurement");
 
@@ -164,7 +169,10 @@ if __name__ == '__main__':
     # TODO: change to an infinite loop
     while True:
         testLog = open('./testLog.txt', 'w')
-        json.dump(count, testLog)
+        
+        data = {}
+        data['count'] = count
+        writeToJSONFile('./', 'data', data)
 
         print(triggeredList);
 
