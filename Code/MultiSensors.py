@@ -135,7 +135,7 @@ if __name__ == '__main__':
     initDist = measure(sensor1);
     # seperate the door into several intervals
     # handle the situation that people going in and out at the same time
-    interval = int (initDist / 5);
+    interval =  (initDist / 5);
     print ("interval is " + str(interval))
     
     print(initDist);
@@ -172,7 +172,7 @@ if __name__ == '__main__':
         dist2slot = int((dist2 - 1) / interval);
         #print(dist2slot);
         dist3slot = int((dist3 - 1) / interval);
-        print("dist1slot: " +str(dist1slot) + "dist2slot: " + str(dist3slot) + "dist3slot: " + str(dist3slot));
+        print("dist1slot: " +str(dist1slot) + " dist2slot: " + str(dist3slot) + " dist3slot: " + str(dist3slot));
         
         print ("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3));
         testLog.write("dist1 = " + str(dist1) + " dist2 = "+ str(dist2) + " dist3 = " + str(dist3) + '\n')
