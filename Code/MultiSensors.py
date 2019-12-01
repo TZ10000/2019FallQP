@@ -201,7 +201,7 @@ if __name__ == '__main__':
         # count people
         for i in range(len(triggeredList)):
             #print ('i is' + str(i))
-            if (len(triggeredList[i]) != 0 and triggeredList[i] == 2):
+            if (len(triggeredList[i]) != 0 and triggeredList[i][0] == 2):
                 triggeredList[i] = [];
                 print("clear 2")
             if (triggeredList[i] == [1, 2, 3]) or (triggeredList[i] == [3, 1, 2]):
