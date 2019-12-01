@@ -164,9 +164,8 @@ if __name__ == '__main__':
     # TODO: change to an infinite loop
     while True:
         testLog = open('./testLog.txt', 'w')
-        print ('current count: ' + str(count))
-        testLog.write('current count: ' + str(count) + '\n')
-        
+        testLog.write(str(count))
+
         print(triggeredList);
 
 
@@ -249,7 +248,7 @@ if __name__ == '__main__':
         # # dynamically generate javascript code
         # javascript_out = "var my_js_data = JSON.parse('{}');".format(json.dumps(my_data))
         # javascript_out += js.read()
-        testLog.write(str(count))
+        
         testLog.close()
         
         time.sleep(0.1)
