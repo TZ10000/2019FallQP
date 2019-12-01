@@ -150,7 +150,7 @@ if __name__ == '__main__':
     objectGap = 1;
 
     # TODO: change to an infinite loop
-    while count < 15:
+    while True:
         print ('current count: ' + str(count))
         testLog.write('current count: ' + str(count) + '\n')
         
