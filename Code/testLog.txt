@@ -1,0 +1,68 @@
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 1.97
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 1.05
+current count: 10
+dist1 = 22.02 dist2 = 22.06 dist3 = 1.2
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 1.25
+current count: 10
+dist1 = 22.04 dist2 = 22.06 dist3 = -8.01
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = -8.02
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.41
+current count: 10
+dist1 = 22.06 dist2 = 21.8 dist3 = 0.68
+current count: 10
+dist1 = 22.06 dist2 = 21.83 dist3 = 0.12
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.21
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.14
+current count: 10
+dist1 = 22.06 dist2 = 20.29 dist3 = 2.02
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.41
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.75
+current count: 10
+dist1 = 22.02 dist2 = 22.06 dist3 = -8.03
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 3.0
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.2
+current count: 10
+dist1 = 22.03 dist2 = 22.06 dist3 = 2.18
+current count: 10
+dist1 = 22.04 dist2 = 22.06 dist3 = 2.74
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 3.26
+current count: 10
+dist1 = 22.02 dist2 = 22.06 dist3 = 3.19
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 4.78
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 2.45
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 2.81
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 3.52
+current count: 10
+dist1 = 22.02 dist2 = 22.06 dist3 = 1.27
+current count: 10
+dist1 = 22.04 dist2 = 22.06 dist3 = 0.82
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.41
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.55
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.34
+current count: 10
+dist1 = 22.02 dist2 = 22.06 dist3 = 1.1
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.48
+current count: 10
+dist1 = 22.03 dist2 = 22.06 dist3 = 22.06
+current count: 10
+dist1 = 22.06 dist2 = 22.06 dist3 = 0.7
