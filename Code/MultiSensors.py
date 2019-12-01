@@ -137,7 +137,7 @@ if __name__ == '__main__':
 
     # open an existing script that is ready to use the my_js_data variable
     # we are about to generate
-    js = open('index.js', 'r')
+    js = open('./Javascript/index.js', 'r')
 
     # dynamically generate javascript code
     javascript_out = "var my_js_data = JSON.parse('{}');".format(json.dumps(my_data))
