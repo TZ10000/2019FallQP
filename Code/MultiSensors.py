@@ -173,7 +173,7 @@ if __name__ == '__main__':
         data = {}
         data['count'] = count
         writeToJSONFile('./', 'data', data)
-
+        print(count)
         print(triggeredList);
 
 
